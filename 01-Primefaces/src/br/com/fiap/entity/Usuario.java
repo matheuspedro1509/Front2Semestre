@@ -21,6 +21,8 @@ public class Usuario {
 	private String cpf;
 	
 	private Calendar dataNascimento;
+	
+	private int nivel;
 
 	public int getCodigo() {
 		return codigo;
@@ -52,6 +54,14 @@ public class Usuario {
 
 	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+
+	public int getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
 	}
 	
 }

@@ -2,10 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
 
 <h:head></h:head> 
 <body> 
-
+	<p:menubar>
+		<p:submenu label="Usuario">
+			<p:menuitem value="Cadastro" outcome="usuario"/>
+			<p:menuitem value="Lista" outcome="lista-usuario"/>
+		</p:submenu>
+	</p:menubar>
+	<h1>Primefaces</h1>
+	<ui:insert name="corpo"></ui:insert>
+	<p>Todos os direitos reservados</p>
 </body> 
 </html>

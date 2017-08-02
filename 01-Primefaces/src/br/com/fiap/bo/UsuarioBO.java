@@ -74,6 +74,14 @@ public class UsuarioBO {
 			em.close();
 		}
 	}
+
+
+	public List<Usuario> buscaPorNome(String nome) {
+		EntityManager em = fabrica.createEntityManager();
+		UsuarioDAO dao = new UsuarioDAOImpl(em);
+		
+		return dao.buscarPorNome(nome);
+	}
 	
 	
 	

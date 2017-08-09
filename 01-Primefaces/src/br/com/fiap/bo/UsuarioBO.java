@@ -83,6 +83,17 @@ public class UsuarioBO {
 		return dao.buscarPorNome(nome);
 	}
 	
+	public List<String> completaNomeUsuario(String nome){
+		EntityManager em = fabrica.createEntityManager();
+		UsuarioDAO dao = new UsuarioDAOImpl(em);
+		return dao.completaNomeUsuario(nome);
+	}
+	
+	public long contarUsuarioPorNivel(int nivel){
+		UsuarioDAO dao = new UsuarioDAOImpl(fabrica.createEntityManager());
+		return dao.buscaPorNivel(nivel);
+	}
+	
 	
 	
 }

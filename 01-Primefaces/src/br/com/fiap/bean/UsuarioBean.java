@@ -29,8 +29,13 @@ public class UsuarioBean {
 	public String cadastrar(){
 		FacesMessage msg;
 		try {
-			bo.cadastrar(usuario);
-			msg = new FacesMessage("Cadastrado");
+			if (usuario.getCodigo() == 0){
+				bo.cadastrar(usuario);
+				msg = new FacesMessage("Cadastrado");
+			}else{
+				bo.atualizar(usuario);
+				msg = new FacesMessage("Atualizado!");
+			}
 		} catch (DBException e) {
 			e.printStackTrace();
 			msg = new FacesMessage("Erro ...");

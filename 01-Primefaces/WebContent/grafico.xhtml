@@ -10,6 +10,10 @@
 			<p:panel header="Usuários por nível">
 				<p:chart type="pie" model="#{graficoBean.graficoPizza}"/>
 			</p:panel>
+			
+			<p:panel header="Usuarios por mes">
+				<p:chart type="line" model="#{graficoBean.graficoLinha}"/>
+			</p:panel>
 		</ui:define>
 	</ui:composition>
 </html>

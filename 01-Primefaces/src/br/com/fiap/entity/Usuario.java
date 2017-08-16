@@ -24,6 +24,8 @@ public class Usuario {
 	
 	private int nivel;
 
+	private String foto;
+	
 	public int getCodigo() {
 		return codigo;
 	}
@@ -62,6 +64,14 @@ public class Usuario {
 
 	public void setNivel(int nivel) {
 		this.nivel = nivel;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 	
 }

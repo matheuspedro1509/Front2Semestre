@@ -25,6 +25,13 @@
 					<p:outputLabel value="Nível" for="nivel"/>
 					<p:rating value="#{usuarioBean.usuario.nivel}" id="nivel"/>
 					
+					<p:outputLabel value="Foto" for="foto"/>
+					<p:fileUpload id="foto"
+						auto="false"
+						allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+						sizeLimit="100000"
+						fileUploadListener="#{usuarioBean.subirFoto}"/>
+					
 					<p:commandButton action="#{usuarioBean.cadastrar()}" value="Gravar"/>
 				</h:panelGrid>
 			</h:form>

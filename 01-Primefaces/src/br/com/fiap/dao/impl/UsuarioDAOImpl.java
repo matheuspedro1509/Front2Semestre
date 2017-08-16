@@ -34,6 +34,15 @@ public class UsuarioDAOImpl extends GenericDAOImpl<Usuario, Integer> implements 
 				.setParameter("n", nivel)
 				.getSingleResult();
 	}
+
+	@Override
+	public long contarPorMesAniversario(int mes) {
+		return em.createQuery("select count(u) from Usuario u"
+				+ " where month(u.dataNascimento) = :m",Long.class)
+				.setParameter("m", mes)
+				.getSingleResult();
+				
+	}
 	
 	
 

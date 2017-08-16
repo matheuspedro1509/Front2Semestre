@@ -94,6 +94,13 @@ public class UsuarioBO {
 		return dao.buscaPorNivel(nivel);
 	}
 	
+	public long contarPorMes(int mes){
+		UsuarioDAO dao = new UsuarioDAOImpl(fabrica.createEntityManager());
+		return dao.contarPorMesAniversario(mes);
+	}
+	
+	
+	
 	
 	
 }

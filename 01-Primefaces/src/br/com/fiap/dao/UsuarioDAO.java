@@ -10,6 +10,7 @@ public interface UsuarioDAO
 	List<Usuario> buscarPorNome(String nome);
 	List<String> completaNomeUsuario(String nome);
 	long buscaPorNivel(int nivel);
+	long contarPorMesAniversario(int mes);
 	
 	
 }

@@ -41,7 +41,6 @@ public class UsuarioBean {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	@PostConstruct
